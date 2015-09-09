@@ -24,21 +24,22 @@
 
         <div id="app" class="container"></div>
 
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src="js/vendor/jquery-1.11.2.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react-with-addons.js"></script>
-    <script type="text/jsx">
-        var HelloWorld = React.createClass({
-            render: function(){
-                return (
-                    <p>Hello World!</p>
-                );
-            }
-        });
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react-with-addons.js"></script>
+        <script src="js/components/header.jsx" type="text/jsx"></script>
+        <script src="js/components/footer.jsx" type="text/jsx"></script>
+        <script src="js/components/screen.jsx" type="text/jsx"></script>
 
-        React.render(<HelloWorld />, document.getElementById("app"));
-    </script>
+        <script type="text/jsx">
+            React.render(
+                    <Screen>
+                        <Header />
+                        <Footer />
+                    </Screen>
+                    , document.body);
+        </script>
     </body>
 </html>
